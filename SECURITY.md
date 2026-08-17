@@ -7,7 +7,7 @@ This security policy applies to Omnus releases and their official distribution a
 Please report security vulnerabilities confidentially and do not disclose them publicly before a fix is available.
 
 ## Contact
-- Email: kontakt@lolax.de
+- Email: info@lolax.dev
 - Subject: Security Report - Omnus
 
 ## What to include in a report

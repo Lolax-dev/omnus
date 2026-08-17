@@ -29,5 +29,5 @@ To the extent permitted by law, the software is provided "as is".
 6. Governing Framework
 Use and enforcement are governed by the applicable laws of the Federal Republic of Germany, to the extent permitted.
 
-Contact: kontakt@lolax.de
+Contact: info@lolax.dev
 Product: https://omnus.lolax.dev

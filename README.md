@@ -52,7 +52,7 @@ Website: [omnus.lolax.dev](https://omnus.lolax.dev)
 ## Feedback & Support
 
 Omnus is in active beta — feedback, bug reports, and feature requests are welcome.
-Open an Issue on GitHub or email [kontakt@lolax.de](mailto:kontakt@lolax.de).
+Open an Issue on GitHub or email [info@lolax.dev](mailto:info@lolax.dev).
 
 ---
 
