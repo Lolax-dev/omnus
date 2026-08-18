@@ -1,0 +1,3 @@
+# Local agent injection (memory-sync) — not deployed
+.agents/AGENTS.md
+.cursor/rules/felix-always.mdc
