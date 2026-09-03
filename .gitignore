@@ -1,3 +1,7 @@
 # Local agent injection (memory-sync) — not deployed
 .agents/AGENTS.md
-.cursor/rules/felix-always.mdc
+.cursor/rules/user-rules.mdc
+.agents/
+
+pnpm-lock.yaml
+pnpm-workspace.yaml
