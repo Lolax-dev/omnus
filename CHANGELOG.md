@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
+- CI runs only on pull requests to `main`.
 - PR-only CI added (ubuntu-latest release-file check on pull requests to `main`/`dev`). Feature-merge notifications on squash into `dev`.
 
 ## [0.1.1] - 2026-07-21
