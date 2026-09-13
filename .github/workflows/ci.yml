@@ -1,0 +1,60 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main, dev]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Release repo
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify release files
+        run: |
+          test -f README.md
+          test -f LICENSE.txt
+          test -f omnus-mark.svg
+          test -f SECURITY.md
+          grep -q "github.com/Lolax-dev/omnus/releases" README.md
+
+  notify-failure:
+    name: Notify CI Failure
+    needs: [check]
+    if: ${{ failure() && !cancelled() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Post error to CI webhook
+        env:
+          WEBHOOK_URL: ${{ secrets.CI_WEBHOOK_URL }}
+        run: |
+          if [ -z "$WEBHOOK_URL" ]; then
+            echo "::warning::CI_WEBHOOK_URL unset; skip notification"
+            exit 0
+          fi
+          python3 -c "
+          import os, json, urllib.request
+          ref = os.environ.get('GITHUB_HEAD_REF') or os.environ.get('GITHUB_REF_NAME')
+          run_url = f\"{os.environ['GITHUB_SERVER_URL']}/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}\"
+          payload = {
+              'embeds': [{
+                  'title': f\"🔴 CI Failure: {os.environ['GITHUB_REPOSITORY']}\",
+                  'description': f\"Workflow **{os.environ['GITHUB_WORKFLOW']}** failed on \`{ref}\`\",
+                  'url': run_url,
+                  'color': 15158332
+              }]
+          }
+          req = urllib.request.Request(os.environ['WEBHOOK_URL'],
+                                       data=json.dumps(payload).encode(),
+                                       headers={'Content-Type': 'application/json', 'User-Agent': 'GitHub-Actions'})
+          urllib.request.urlopen(req)
+          "
