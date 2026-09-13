@@ -8,9 +8,6 @@
     <img alt="macOS Apple Silicon" src="https://img.shields.io/badge/macOS-Apple_Silicon-555555?logo=apple&logoColor=white" />
     <img alt="macOS Intel" src="https://img.shields.io/badge/macOS-Intel-555555?logo=apple&logoColor=white" />
   </p>
-  <p>
-    <a href="https://github.com/Klix927/omnus/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Klix927/omnus?style=flat&logo=github" /></a>
-  </p>
 </div>
 
 ---
@@ -32,7 +29,7 @@ Omnus is your central workspace for structured learning and work. Manage documen
 
 ## Installation
 
-Download the latest build for your platform from the [Releases](../../releases) tab:
+Download the latest build for your platform from [Releases](https://github.com/Lolax-dev/omnus/releases):
 
 | Platform | File |
 |----------|------|
