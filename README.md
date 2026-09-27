@@ -21,8 +21,10 @@ Omnus is your central workspace for structured learning and work. Manage documen
 * **Spaces & Documents:** Organize courses in Spaces. Manage PDFs, learn interactively, and stay on top of everything.
 * **Smart notes:** A powerful editor for all your notes and annotations.
 * **Tasks & Calendar:** Never miss a deadline. Integrated task management tied to your topics.
-* **AI integration (BYO-Key):** Bring your own API key to use smart AI features inside the hub — no hidden subscription fees.
+* **OI (BYO-Key):** Ask your documents and notes. OI can create a note or a task. Your API key, no subscription. Semantic search stays off until you turn it on.
+* **Calendar:** Tasks in the hub, plus optional CalDAV sync.
 * **BYO-Cloud sync:** Connect your own cloud drive and sync Omnus across machines. Your cloud, your rules — no vendor lock-in.
+* **Updates:** The desktop app checks GitHub Releases.
 * **Local-first:** Works great offline on one device. Cloud sync is optional, not required.
 * **Windows & macOS:** Native builds for Windows, plus macOS for **Apple Silicon** and **Intel**.
 * **Focus UI:** Fullscreen-optimized learning surface for distraction-free work.
@@ -33,9 +35,9 @@ Download the latest build for your platform from [Releases](https://github.com/L
 
 | Platform | File |
 |----------|------|
-| **Windows** | `Omnus_0.1.1_x64-setup.exe` |
-| **macOS (Apple Silicon)** | `Omnus_0.1.1_aarch64.dmg` |
-| **macOS (Intel)** | `Omnus_0.1.1_x64.dmg` |
+| **Windows** | [`Omnus_0.2.0_x64-setup.exe`](https://github.com/Lolax-dev/omnus/releases/download/v0.2.0/Omnus_0.2.0_x64-setup.exe) |
+| **macOS (Apple Silicon)** | [`Omnus_0.1.1_aarch64.dmg`](https://github.com/Lolax-dev/omnus/releases/download/v0.1.1/Omnus_0.1.1_aarch64.dmg) until the 0.2.0 Mac build is uploaded |
+| **macOS (Intel)** | [`Omnus_0.1.1_x64.dmg`](https://github.com/Lolax-dev/omnus/releases/download/v0.1.1/Omnus_0.1.1_x64.dmg) until the 0.2.0 Mac build is uploaded |
 
 1. Download the build that matches your OS and chip.
 2. Install / open the app.
